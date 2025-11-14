@@ -206,6 +206,7 @@ class _DropdownMenuItemButtonState<T> extends State<_DropdownMenuItemButton<T>> 
         onTap: _handleOnTap,
         onFocusChange: _handleFocusChange,
         overlayColor: menuItemStyle.overlayColor,
+        excludeFromSemantics: true, //TBD. The whole fork is needed just to set this property. This fixes the Empty Semantic Node for IOS
         child: isSelectedItem
             ? menuItemStyle.selectedMenuItemBuilder?.call(context, child) ?? child
             : child,
